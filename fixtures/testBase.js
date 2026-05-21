@@ -5,5 +5,4 @@ export const test = base.extend({
         username: 'user@example.com',
         password: 'password123'
     }
-}
-)
+})

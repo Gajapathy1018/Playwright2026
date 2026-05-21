@@ -1,7 +1,11 @@
 class HomePage {
     constructor(page) {
         this.page = page;
-        this.signInButton = page.locator('text=Sign In');
+        this.acceptCookiesButton = page.getByTestId('accept-all')
+        this.signInButton = page.locator('[data-test="loginAnchor"]');
+    }
+    async acceptCookies() {
+        await this.acceptCookiesButton.click();
     }
     async signIn() {
         await this.signInButton.click();
